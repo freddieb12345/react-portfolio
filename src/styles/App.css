@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+:root {
+  --main-color: #DE5656;
+  --secondary-color: #feeeee;
+  --font-color: black;
+  --logo-invert: 0%;
+  --scroll-icon-color: #DE5656;
+  --mail-text-color:#feeeee;
+  --mail-color: #DE5656;
+}
+
+body {
+  /* background: linear-gradient(217deg, #DE5656, rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, #feeeee, rgba(0,255,0,0) 70.71%),
+              linear-gradient(336deg, white, rgba(0,0,255,0) 70.71%); */
+  background-color: var(--secondary-color);
+  height: 100vh;
+  transition: all 500ms ease;
+  overflow: hidden;
+}
+
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(217deg, #de565652, rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, #feeeee, rgba(0,255,0,0) 70.71%),
+              linear-gradient(336deg, white, rgba(0,0,255,0) 70.71%);
+  border-radius: 100%;
+  filter: blur(4px);
+  width: 400px;
+  height: 400px;
+  left: 0%;
+  bottom:30%;
+  animation: moving 60s linear alternate-reverse infinite;
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(217deg, #de565652, rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, #feeeee, rgba(0,255,0,0) 70.71%),
+              linear-gradient(336deg, white, rgba(0,0,255,0) 70.71%);
+  border-radius: 100%;
+  filter: blur(4px);
+  width: 400px;
+  height: 400px;
+  left: 60%;
+  bottom: 60%;
+  animation: moving2 60s linear alternate-reverse infinite;
+  z-index: -1;
+}
+
+@keyframes moving {
+  0% {left: 0%; bottom: 30%;}
+  25% {left: 35% ; bottom: 90%;}
+  50% {left: 80%; bottom: 40%;}
+  75% {left: 35%; bottom: 0%;}
+  100% {left: 0%; bottom: 30%;}
+}
+
+@keyframes moving2 {
+  0% {left: 80%; bottom: 70%;}
+  25% {left: 50% ; bottom: 0%;}
+  50% {left: 0% ; bottom: 0%;}
+  75% {left: 0% ; bottom: 40%;}
+  100% {left: 70% ; bottom: 80%;}
+}
+
+.red {
+  color: var(--main-color);
+}
+
+.click {
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.click:hover{
+  transform: scale(1.1);
+}
+
+.click:active {
+  transform: scale(0.8);
+}
