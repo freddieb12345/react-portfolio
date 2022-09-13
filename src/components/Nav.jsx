@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "../styles/Nav.module.css";
-import Logo from "../assets/logo.png";
+// import Logo from "../assets/logo.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Logo from "./ui/Logo";
 
 const Nav = () => {
   let constrastToggle;
@@ -19,6 +21,7 @@ const Nav = () => {
       document.documentElement.style.setProperty("--mail-color", "#feeeee");
       document.documentElement.style.setProperty("--mail-text-color", "#DE5656");
       document.documentElement.style.setProperty("--about-color", "#242424");
+      document.documentElement.style.setProperty("--logo-secondary-color", "#feeeee");
     } else {
       document.documentElement.style.setProperty(
         "--secondary-color",
@@ -33,9 +36,10 @@ const Nav = () => {
   }
   return (
     <nav>
-      <figure>
-        <img src={Logo} alt="logo" className={styles.logo}/>
-      </figure>
+      {/* <figure>
+        <img src={Logo} alt="logo" className={styles.logo}/> 
+      </figure> */}
+      <Logo unit="10px"/>
       <ul className={styles.list}>
         <li className={`${styles.list__item} ${styles.list__itemAbout}`}>
           <a

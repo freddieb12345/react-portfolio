@@ -3,6 +3,7 @@ import Landing from './components/Landing';
 import Nav from './components/Nav';
 import About from './components/About';
 import Projects from './components/Projects';
+import Logo from './components/ui/Logo';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Landing />
       <About />
       <Projects />
+      <Logo unit="2px"/>
     </div>
   );
 }
