@@ -3,7 +3,6 @@ nav {
     height: 100px;
     max-width: 1400px;
     margin: 0 auto;
-    z-index: 1;
 }
 
 figure{
@@ -36,12 +35,10 @@ figure{
     font-weight: bold;
 }
 
-/* Sets the relative position for the hover effect */
 .link__hoverEffect {
     position: relative;
 }
 
-/* creates the after pseudo class for the underline */
 .link__hoverEffect::after {
     content: "";
     position: absolute;

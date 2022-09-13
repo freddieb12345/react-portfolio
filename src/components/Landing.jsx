@@ -11,12 +11,12 @@ const Landing = () => {
                     <h1 className={`red ${styles.title}`}>I'm Freddie</h1>
                     <p className={styles.header__para}>Frontend Web-Developer</p>
                 </div>
-                <a href="">
-                    <button className={`${styles.mail__icon} ${styles.click}`}>
-                        <FontAwesomeIcon icon="fa-solid fa-envelope" />
+                <a href="/#">
+                    <button className={`${styles.mail__icon} click`}>
+                        <FontAwesomeIcon icon="fa-solid fa-envelope"/>
                     </button>
                 </a>
-                <a href="" className={styles.scroll__iconWrapper}>
+                <a href="/#about" className={styles.scroll__iconWrapper}>
                     <div className={`${styles.scroll__icon} ${styles.click}`}></div>
                 </a>
             </header>

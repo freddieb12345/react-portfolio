@@ -13,16 +13,14 @@
   --scroll-icon-color: #DE5656;
   --mail-text-color:#feeeee;
   --mail-color: #DE5656;
+  --about-color: white
 }
 
 body {
-  /* background: linear-gradient(217deg, #DE5656, rgba(255,0,0,0) 70.71%),
-              linear-gradient(127deg, #feeeee, rgba(0,255,0,0) 70.71%),
-              linear-gradient(336deg, white, rgba(0,0,255,0) 70.71%); */
   background-color: var(--secondary-color);
   height: 100vh;
   transition: all 500ms ease;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 
@@ -37,7 +35,7 @@ a {
 
 body::after {
   content: "";
-  position: absolute;
+  position: fixed;
   background: linear-gradient(217deg, #de565652, rgba(255,0,0,0) 70.71%),
               linear-gradient(127deg, #feeeee, rgba(0,255,0,0) 70.71%),
               linear-gradient(336deg, white, rgba(0,0,255,0) 70.71%);
@@ -48,12 +46,12 @@ body::after {
   left: 0%;
   bottom:30%;
   animation: moving 60s linear alternate-reverse infinite;
-  z-index: -1;
+  z-index: -10;
 }
 
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   background: linear-gradient(217deg, #de565652, rgba(255,0,0,0) 70.71%),
               linear-gradient(127deg, #feeeee, rgba(0,255,0,0) 70.71%),
               linear-gradient(336deg, white, rgba(0,0,255,0) 70.71%);
@@ -64,7 +62,7 @@ body::before {
   left: 60%;
   bottom: 60%;
   animation: moving2 60s linear alternate-reverse infinite;
-  z-index: -1;
+  z-index: -10;
 }
 
 @keyframes moving {
@@ -98,4 +96,13 @@ body::before {
 
 .click:active {
   transform: scale(0.8);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }

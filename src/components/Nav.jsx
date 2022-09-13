@@ -18,6 +18,7 @@ const Nav = () => {
       document.documentElement.style.setProperty("--scroll-icon-color", "white");
       document.documentElement.style.setProperty("--mail-color", "#feeeee");
       document.documentElement.style.setProperty("--mail-text-color", "#DE5656");
+      document.documentElement.style.setProperty("--about-color", "#242424");
     } else {
       document.documentElement.style.setProperty(
         "--secondary-color",
@@ -38,7 +39,7 @@ const Nav = () => {
       <ul className={styles.list}>
         <li className={`${styles.list__item} ${styles.list__itemAbout}`}>
           <a
-            href=""
+            href="/#about"
             className={`${styles.list__itemAnchor} ${styles.link__hoverEffect} ${styles.link__hoverEffect} `}
           >
             About
@@ -46,7 +47,7 @@ const Nav = () => {
         </li>
         <li className={styles.list__item}>
           <a
-            href=""
+            href="/#"
             className={`${styles.list__itemAnchor} ${styles.link__hoverEffect}`}
           >
             Projects
@@ -54,7 +55,7 @@ const Nav = () => {
         </li>
         <li className={styles.list__item}>
           <a
-            href=""
+            href="/#"
             className={`${styles.list__itemAnchor} ${styles.link__hoverEffect}`}
           >
             Contact
@@ -62,6 +63,7 @@ const Nav = () => {
         </li>
         <li className={styles.list__item} onClick={toggleContrast}>
           <a
+            href="/#"
             className={`${styles.list__itemAnchor} ${styles.link__hoverEffect}`}
           >
             <FontAwesomeIcon icon="fa-solid fa-circle-half-stroke" />
