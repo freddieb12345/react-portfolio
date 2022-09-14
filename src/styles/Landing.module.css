@@ -75,3 +75,19 @@ header {
         transform: translateY(-3px);
     }
 }
+
+.modal {
+    opacity: var(--modal-opacity);
+    /* opacity: 1; */
+    /* display: var(--display, none); */
+    display: flex;
+    position: absolute;
+    height: 80vh;
+    width: 80vw;
+    background-color: #2424241f;
+    border-radius: 50px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: all 1s ease;
+}

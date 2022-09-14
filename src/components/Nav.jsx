@@ -1,45 +1,30 @@
 import React from "react";
 import styles from "../styles/Nav.module.css";
-// import Logo from "../assets/logo.png";
-
+import { toggleContrast } from "../js/toggleContrast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "./ui/Logo";
 
 const Nav = () => {
-  let constrastToggle;
-  function toggleContrast() {
-    console.log("hello");
-    constrastToggle = !constrastToggle;
-    if (constrastToggle) {
-      document.documentElement.style.setProperty(
-        "--secondary-color",
-        "#242424"
-      );
-      document.documentElement.style.setProperty("--font-color", "white");
-      document.documentElement.style.setProperty("--logo-invert", "100%");
-      document.documentElement.style.setProperty("--scroll-icon-color", "white");
-      document.documentElement.style.setProperty("--mail-color", "#feeeee");
-      document.documentElement.style.setProperty("--mail-text-color", "#DE5656");
-      document.documentElement.style.setProperty("--about-color", "#242424");
-      document.documentElement.style.setProperty("--logo-secondary-color", "#feeeee");
+  let modalToggle;
+  function toggleModal() {
+    modalToggle = !modalToggle;
+    console.log(modalToggle)
+    if(modalToggle) {
+      document.documentElement.style.setProperty("--modal-opacity", "1");
+      document.documentElement.style.setProperty("--body-overflow", "hidden");
+      document.getElementById("this").classList.add('fifteen-pixel')
+      // document.documentElement.style.setProperty("--display", "block");
     } else {
-      document.documentElement.style.setProperty(
-        "--secondary-color",
-        "#feeeee"
-      );
-      document.documentElement.style.setProperty("--font-color", "black");
-      document.documentElement.style.setProperty("--logo-invert", "0%");
-      document.documentElement.style.setProperty("--scroll-icon-color", "#DE5656");
-      document.documentElement.style.setProperty("--mail-color", "#DE5656");
-      document.documentElement.style.setProperty("--mail-text-color", "#feeeee");
+      // document.documentElement.style.setProperty("--display", "none");
+      document.documentElement.style.setProperty("--modal-opacity", "0");
+      document.documentElement.style.setProperty("--body-overflow", "auto");
+      document.getElementById("this").classList.remove('fifteen-pixel')
     }
+
   }
   return (
     <nav>
-      {/* <figure>
-        <img src={Logo} alt="logo" className={styles.logo}/> 
-      </figure> */}
-      <Logo unit="10px"/>
+      <Logo selectedUnit="2px"/>
       <ul className={styles.list}>
         <li className={`${styles.list__item} ${styles.list__itemAbout}`}>
           <a
@@ -61,6 +46,7 @@ const Nav = () => {
           <a
             href="/#"
             className={`${styles.list__itemAnchor} ${styles.link__hoverEffect}`}
+            onClick={toggleModal}
           >
             Contact
           </a>

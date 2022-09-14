@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "../styles/Landing.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Logo from './ui/Logo';
 
 const Landing = () => {
     return (
@@ -20,6 +21,9 @@ const Landing = () => {
                     <div className={`${styles.scroll__icon} ${styles.click}`}></div>
                 </a>
             </header>
+            <div className={styles.modal}>
+            <Logo selectedUnit="10px"/>
+            </div>
         </section>
     );
 }
