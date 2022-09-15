@@ -1,0 +1,77 @@
+
+.container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--unit);
+    transition: all 1000ms ease;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.row {
+    height: var(--unit);
+    display: flex;
+    flex-direction: row;
+    gap: var(--unit);
+    transition: all 1000ms ease;
+}
+
+.row:nth-child(odd) {
+    transform: translateX(calc(1 * var(--initial-translation, 10px)))
+}
+
+.row:nth-child(even) {
+    transform: translateX(calc(-1 * var(--initial-translation, 10px)))
+}
+
+.cell {
+    height: 100%;
+    width: calc(var(--size, 2px) * var(--unit));
+    background-color: var(--logo-secondary-color);
+    border-radius: 1000px;
+}
+
+.cell.size2{--size:2;}
+
+.cell.size3 {--size: 3;}
+
+.cell.size4 {--size: 4;}
+
+.cell.size5 {--size: 5;}
+
+.cell.size6 {--size: 6;}
+
+.cell.size7 {--size: 7;}
+
+.cell.size8 {--size: 8;}
+
+.cell.size9 {--size: 9;}
+
+.cell.size9 {--size: 10;}
+
+.cell.size10 {--size: 10;}
+
+.cell.size11 {--size: 11;}
+
+.cell.size12 {--size: 12;}
+
+.cell.size13 {--size: 13;}
+
+.cell.size14 {--size: 14;}
+
+.cell.size15 {--size: 15;}
+
+.cell.size16 {--size: 16;}
+
+.cell.size17 {--size: 17;}
+
+.cell.size18 {--size: 18;}
+
+.cell.size19 {--size: 19;}
+
+.cell.size20 {--size: 20;}
+
+.red {
+    background-color: var(--main-color);
+}

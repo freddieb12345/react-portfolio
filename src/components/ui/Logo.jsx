@@ -4,8 +4,8 @@ import React, { useEffect, useState } from 'react';
 const Logo = ({selectedUnit, initialTranslation, finalPosition}) => {
     const [unit, setUnit] = useState();
 
-    document.documentElement.style.setProperty("--initial-translation", initialTranslation)
-    document.documentElement.style.setProperty("--final-position", finalPosition)
+    // document.documentElement.style.setProperty("--initial-translation", initialTranslation)
+    // document.documentElement.style.setProperty("--final-position", finalPosition)
 
     useEffect(() => {
         const container = document.getElementById("this")

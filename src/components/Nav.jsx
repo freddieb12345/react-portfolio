@@ -3,9 +3,11 @@ import styles from "../styles/Nav.module.css";
 import { toggleContrast } from "../js/toggleContrast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "./ui/Logo";
+import NavLogo from "./ui/NavLogo";
 
 const Nav = () => {
   let modalToggle;
+
   function toggleModal() {
     modalToggle = !modalToggle;
     console.log(modalToggle)
@@ -13,18 +15,21 @@ const Nav = () => {
       document.documentElement.style.setProperty("--modal-opacity", "1");
       document.documentElement.style.setProperty("--body-overflow", "hidden");
       document.getElementById("this").classList.add('fifteen-pixel')
+      document.getElementById("header").classList.add('display-none')
       // document.documentElement.style.setProperty("--display", "block");
     } else {
       // document.documentElement.style.setProperty("--display", "none");
       document.documentElement.style.setProperty("--modal-opacity", "0");
       document.documentElement.style.setProperty("--body-overflow", "auto");
       document.getElementById("this").classList.remove('fifteen-pixel')
+      document.getElementById("header").classList.remove('display-none')
     }
 
   }
   return (
     <nav>
-      <Logo selectedUnit="2px"/>
+      {/* <Logo selectedUnit="2px"/> */}
+      <NavLogo />
       <ul className={styles.list}>
         <li className={`${styles.list__item} ${styles.list__itemAbout}`}>
           <a

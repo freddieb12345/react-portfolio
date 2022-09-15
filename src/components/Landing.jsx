@@ -6,7 +6,7 @@ import Logo from './ui/Logo';
 const Landing = () => {
     return (
         <section className={styles.landing}>
-            <header>
+            <header id='header'>
                 <div className={styles.header__content}>
                     <h1 className={styles.title}>Hey</h1>
                     <h1 className={`red ${styles.title}`}>I'm Freddie</h1>
@@ -22,7 +22,8 @@ const Landing = () => {
                 </a>
             </header>
             <div className={styles.modal}>
-            <Logo selectedUnit="10px"/>
+                <Logo selectedUnit="10px"/>
+                <h3 className={styles.nodal__header}>Contact me below!</h3>
             </div>
         </section>
     );

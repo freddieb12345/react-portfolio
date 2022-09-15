@@ -14,6 +14,7 @@ header {
     display: flex;
     height: 100%;
     color: var(--font-color);
+    transition: all 100ms ease;
 }
 
 .header__content{
@@ -90,4 +91,10 @@ header {
     left: 50%;
     transform: translate(-50%, 0%);
     transition: all 1s ease;
+}
+
+.modal__header {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
