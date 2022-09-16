@@ -79,9 +79,8 @@ header {
 
 .modal {
     opacity: var(--modal-opacity);
-    /* opacity: 1; */
-    /* display: var(--display, none); */
     display: flex;
+    flex-direction: column;
     position: absolute;
     height: 80vh;
     width: 80vw;
@@ -94,7 +93,25 @@ header {
 }
 
 .modal__header {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* top: 50%;
+    left: 0%; */
+    /* transform: translate(-50%, 50%); */
+}
+
+.modal__subTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.icon{
+    position: absolute;
+    font-size: 32px;
+    left: 93%;
+    top: 4%;
 }

@@ -1,0 +1,107 @@
+
+:root {
+    --form1-opacity: 1;
+    --form2-opacity: 0;
+    --form3-opacity: 0;
+}
+
+.contactForm{
+    width: 100% ;
+    height: 100%;
+}
+
+.name{
+    transition: all 1000ms ease;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 200px 0;
+    opacity: var(--form1-opacity)
+}
+
+.nameLabel, 
+.emailLabel,
+.messageLabel{
+    display: flex;
+    justify-content: flex-start;
+    color: var(--main-color);
+    font-size: 52px;
+}
+
+.nameInput,
+.emailInput,
+.messageInput{
+    background-color: #de565652;
+    padding: 0px 16px;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    font-size: 40px;
+    width: 60%;
+    height: 15%;
+    text-align: center;
+}
+
+.formButton{
+    border: none;
+    border-radius: 40px;
+    width: 15%;
+    height: 10%;
+}
+
+.email{
+    transition: all 500ms ease;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 200px 0;
+    opacity: var(--form2-opacity)
+}
+
+.message {
+    transition: all 500ms ease;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 200px 0;
+    opacity: var(--form3-opacity)
+}
+
+.spinnerWrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    animation: spinner 1s infinite;
+}
+
+.success{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 200px 0;
+}
+
+@keyframes spinner {
+    100% {
+        rotate: 360deg;
+    }
+}

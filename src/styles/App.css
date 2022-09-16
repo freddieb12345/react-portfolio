@@ -14,13 +14,10 @@
   --mail-text-color:#feeeee;
   --mail-color: #DE5656;
   --about-color: white;
-  --logo-secondary-color: #2424241f;
-  --unit:2px;
-  --initial-translation:0px;
-  --final-position: 100px;
   --body-overflow: auto;
   --modal-opacity: 0;
   --inverse-modal-opacity: 1;
+  --logo-secondary-color: #2424241f;
 }
 
 body {
@@ -116,6 +113,34 @@ body::before {
 
 html {
   scroll-behavior: smooth;
+}
+
+.opacity{
+  opacity: 0;
+}
+
+.display-none{
+  display: none !important;
+}
+
+.modal__logoAnimation .modal_row:nth-child(odd) {
+  --modifier: -1;
+  animation: slideModal 1s calc(var(--delay) * 50ms) 1 forwards;
+  
+}
+
+.modal__logoAnimation .modal_row:nth-child(even) {
+  --modifier: 1;
+  animation: slideModal 1s calc(var(--delay) * 50ms) 1 forwards;
+}
+
+@keyframes slideModal {
+  100% {
+      translate: calc(var(--modifier) * 1000px);
+      opacity: 0;
+      display: none;
+      visibility: hidden;
+  }
 }
 
 .container {

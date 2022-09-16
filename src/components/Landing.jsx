@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from "../styles/Landing.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Logo from './ui/Logo';
+import ModalLogo from './ui/ModalLogo';
+import Contact from './ui/Contact';
+// import Logo from './ui/Logo';
+import {toggleModal} from "../js/toggleModal"
+
 
 const Landing = () => {
     return (
@@ -22,8 +26,16 @@ const Landing = () => {
                 </a>
             </header>
             <div className={styles.modal}>
-                <Logo selectedUnit="10px"/>
-                <h3 className={styles.nodal__header}>Contact me below!</h3>
+                {/* <Logo selectedUnit="10px"/> */}
+                <ModalLogo />
+                <Contact />
+                <a className={`${styles.icon} click`} onClick={toggleModal}>
+                    <FontAwesomeIcon icon="fa-solid fa-x"/>
+                </a>
+                {/* <h3 className={styles.modal__header}>Contact me below!</h3>
+                <h4 className={styles.modal__subTitle}>
+                    I'd love to hear from you
+                </h4> */}
             </div>
         </section>
     );

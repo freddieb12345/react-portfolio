@@ -8,7 +8,7 @@ export function toggleContrast() {
         "#242424"
         );
         document.documentElement.style.setProperty("--font-color", "white");
-        document.documentElement.style.setProperty("--logo-invert", "100%");
+        // document.documentElement.style.setProperty("--logo-invert", "100%");
         document.documentElement.style.setProperty("--scroll-icon-color", "white");
         document.documentElement.style.setProperty("--mail-color", "#feeeee");
         document.documentElement.style.setProperty("--mail-text-color", "#DE5656");
@@ -20,7 +20,7 @@ export function toggleContrast() {
         "#feeeee"
         );
         document.documentElement.style.setProperty("--font-color", "black");
-        document.documentElement.style.setProperty("--logo-invert", "0%");
+        // document.documentElement.style.setProperty("--logo-invert", "0%");
         document.documentElement.style.setProperty("--scroll-icon-color", "#DE5656");
         document.documentElement.style.setProperty("--mail-color", "#DE5656");
         document.documentElement.style.setProperty("--mail-text-color", "#feeeee");
