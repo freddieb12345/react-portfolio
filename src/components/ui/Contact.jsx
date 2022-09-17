@@ -12,6 +12,10 @@ const Contact = () => {
     const [success, setSuccess] = useState(false);
     const [failure, setFailure] = useState(false);
 
+    if(failure || success) {
+      document.getElementById("modal_logo").classList.add('display-noneImportant')
+    }
+
     const formStep1 = (e) => {
         e.preventDefault();
         function displayNone() {
@@ -60,7 +64,6 @@ const Contact = () => {
     setLoading(true)
     emailjs.sendForm("service_zgpkgjw", "template_cm4wn4j", form.current, "cwI6VZszb2Lg7X3fo")
       .then((result) => {
-          console.log(result.text);
           setLoading(false)
           setSuccess(true)
       }, (error) => {

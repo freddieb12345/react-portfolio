@@ -2,20 +2,16 @@ nav {
     display: flex;
     height: 100px;
     max-width: 1400px;
+    padding: 16px;
     margin: 0 auto;
     opacity: 1;
 }
 
-figure{
-    display: flex;
+.btnMenu {
+    display: none;
     align-items: center;
-    margin: 16px;
-}
-
-.logo{
-    height: 50px;
-    width: 120px;
-    filter: invert(var(--logo-invert));
+    justify-content: flex-end;
+    font-size: 36px;
 }
 
 .list{
@@ -64,8 +60,51 @@ figure{
     width: 100%;
 }
 
+.navModal{
+    position: absolute;
+    height: 300px;
+    width: 150px;
+    right: 16px;
+    top: 32px;
+    background-color: #2424241f;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.cross{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.modalList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.modalList__item {
+    display: flex;
+    padding: 25px;
+}
+
+.modalList__itemAnchor {
+    color: var(--font-color);
+    font-weight: bold;
+}
+
 @media (max-width: 600px) {
-    .list__itemAbout {
+    nav{
+        justify-content: space-between;
+    }
+    .list {
         display: none;
+    }
+    .btnMenu {
+        display: flex;
     }
 }

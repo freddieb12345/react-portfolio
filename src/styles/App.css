@@ -123,15 +123,19 @@ html {
   display: none !important;
 }
 
+.display-noneImportant{
+  display: none !important;
+}
+
 .modal__logoAnimation .modal_row:nth-child(odd) {
   --modifier: -1;
-  animation: slideModal 1s calc(var(--delay) * 50ms) 1 forwards;
+  animation: slideModal 1s calc(var(--delay) * 50ms + 500ms) 1 forwards;
   
 }
 
 .modal__logoAnimation .modal_row:nth-child(even) {
   --modifier: 1;
-  animation: slideModal 1s calc(var(--delay) * 50ms) 1 forwards;
+  animation: slideModal 1s calc(var(--delay) * 50ms + 500ms) 1 forwards;
 }
 
 @keyframes slideModal {

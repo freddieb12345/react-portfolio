@@ -115,3 +115,13 @@ header {
     left: 93%;
     top: 4%;
 }
+
+@media (max-width: 500px) {
+
+    .title{
+        font-size: 60px;
+    }
+    .header__para{
+        font-size: 24px;
+    }
+}
