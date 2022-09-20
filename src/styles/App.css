@@ -8,6 +8,7 @@
 :root {
   --main-color: #DE5656;
   --secondary-color: #242424;
+  --background: linear-gradient(to right top, #242424, #443449, #763f60, #ae4765, #de5656);
   --font-color: white;
   --logo-invert: 0%;
   --handle-size: 3rem;
@@ -22,7 +23,8 @@
 }
 
 body {
-  background-color: var(--secondary-color);
+  background: fixed;
+  background-image: var(--background);
   height: 100vh;
   transition: all 500ms ease;
   overflow-x: hidden;
@@ -300,9 +302,7 @@ html {
   overflow: hidden;
 }
 
-.slider__row{
-  
-}
+
 
 .slider__row:last-child {
   padding-bottom: 10px;
@@ -345,7 +345,7 @@ html {
 
 .handle {
   border: none;
-  background-color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 1rem;
   flex-grow: 0;
   flex-shrink: 0;

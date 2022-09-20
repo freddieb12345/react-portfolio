@@ -4,8 +4,8 @@ export function toggleContrast() {
     constrastToggle = !constrastToggle;
     if (!constrastToggle) {
         document.documentElement.style.setProperty(
-        "--secondary-color",
-        "#242424"
+        "--background",
+        "linear-gradient(to right top, #242424, #443449, #763f60, #ae4765, #de5656)"
         );
         document.documentElement.style.setProperty("--font-color", "white");
 
@@ -15,8 +15,8 @@ export function toggleContrast() {
         document.documentElement.style.setProperty("--logo-secondary-color", "#feeeee");
     } else {
         document.documentElement.style.setProperty(
-        "--secondary-color",
-        "#feeeee"
+        "--background",
+        "linear-gradient(to right top, #feeeee, #fcc9c8, #f5a4a2, #eb7e7c, #de5656)"
         );
         document.documentElement.style.setProperty("--font-color", "black");
 
