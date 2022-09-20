@@ -21,6 +21,9 @@ const About = () => {
                 <div className={styles.about__content}>
                     <h1 className={`red ${styles.title}`}>About me</h1>
                     <p className={styles.about__para}>I'm a 25 year-old <span className='red'>frontend software engineer</span> with a passion for building high quality, <span className='red'>responsive</span> web applications, with the aim to improve the overall <span className='red'>user experience.</span></p>
+                
+                </div>
+                <div className={styles.technologies}>
                     <h1 className={`red ${styles.sub__title}`}>Technologies</h1>
                     <div className={styles.languages}>
                         <Language logo={HtmlLogo} text="HTML"/>
