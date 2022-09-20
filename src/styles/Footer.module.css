@@ -1,0 +1,35 @@
+.container {
+    padding: 50px 0;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.footer__row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logoImg{
+    filter: invert(100%);
+    width: 150px;
+}
+
+.footer__socialList {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+.footer__socialLink,
+.footer__copyright {
+    color: var(--font-color);
+}

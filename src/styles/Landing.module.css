@@ -1,3 +1,7 @@
+:root {
+    --header-opacity: 1
+}
+
 .landing {
     height: calc(100vh - 100px);
     position: relative;
@@ -14,7 +18,8 @@ header {
     display: flex;
     height: 100%;
     color: var(--font-color);
-    transition: all 100ms ease;
+    transition: all 500ms ease;
+    opacity: var(--header-opacity);
 }
 
 .header__content{
@@ -117,7 +122,6 @@ header {
 }
 
 @media (max-width: 500px) {
-
     .title{
         font-size: 60px;
     }

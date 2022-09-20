@@ -35,7 +35,6 @@ const About = () => {
                         <Language logo={NodeLogo} text="Node.js"/>
                         <Language logo={RoborFrameWorkLogo} text="RobotFrameWork"/>
                         <Language logo={SeleniumLogo} text="Selenium"/>
-
                     </div>
                 </div>
             </div>

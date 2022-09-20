@@ -61,6 +61,7 @@ nav {
 }
 
 .navModal{
+    
     position: absolute;
     height: 300px;
     width: 150px;
@@ -72,18 +73,21 @@ nav {
 }
 
 .cross{
+    color: var(--main-color);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
     font-size: 25px;
     padding-top: 10px;
+    padding-right: 5%;
 }
 
 .modalList{
+
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: flex-end;
 }
 
@@ -93,7 +97,7 @@ nav {
 }
 
 .modalList__itemAnchor {
-    color: var(--font-color);
+    color: var(--main-color);
     font-weight: bold;
 }
 

@@ -1,5 +1,5 @@
 .about {
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--about-color);
     background-color: #2424241f;
 }
@@ -22,7 +22,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 50px;
+    padding: 50px;
 }
 
 .about__para{
@@ -38,5 +38,27 @@
 .languages {
     display: flex;
     flex-wrap: wrap;
+}
+
+@media (max-width: 1150px) {
+    .title,
+    .sub__title{
+        font-size: 60px;
+    }
+    .about__para{
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .title,
+    .sub__title{
+        font-size: 40px;
+    }
+    .about__para{
+        font-size: 20px;
+        text-align: center;
+    }
 }
 

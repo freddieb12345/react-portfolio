@@ -3,15 +3,11 @@ import styles from '../styles/Projects.module.css'
 import Project from './ui/Project';
 import movieHomePage from "../assets/movie-home-page.PNG"
 import libraryHomePage from "../assets/library-home-page.PNG"
-// import whitelistHomePage from "../assets/whitelist-home-page.PNG"
-// import nftCollectionHomePage from "../assets/nft-collection-home-page.PNG"
-// import icoHomePage from "../assets/ico-home-page.PNG"
-// import daoHomePage from "../assets/dao-home-page.PNG"
-// import exchangeHomePage from "../assets/exchange-home-page.PNG"
+import Slider from './Slider';
 
 const Projects = () => {
     return (
-        <section className={styles.projects}>
+        <section className={styles.projects} id="projects">
             <h1 className={styles.projects__header}>Here are some of my<span className='red'>&nbsp;Projects</span></h1>
             <ul>
                 <Project 
@@ -30,47 +26,12 @@ const Projects = () => {
                     websiteLink="https://github.com/freddieb12345/react-book-e-commerce"
                     githubLink="https://uk-library-react-app.herokuapp.com/"
                 />
-                {/* <Project 
-                    title="Whitelist dApp" 
-                    image={whitelistHomePage} 
-                    technologies="HTML, CSS, JAVASCRIPT, REACT, NODEJS, AXIOS"
-                    description="Library is Britain's leading online library platform with thousands of books to choose from, at the lowest prices"
-                    websiteLink="https://github.com/freddieb12345/react-book-e-commerce"
-                    githubLink="https://uk-library-react-app.herokuapp.com/"
-                />
-                <Project 
-                    title="NFT Collection" 
-                    image={nftCollectionHomePage} 
-                    technologies="HTML, CSS, JAVASCRIPT, REACT, NODEJS, AXIOS"
-                    description="Library is Britain's leading online library platform with thousands of books to choose from, at the lowest prices"
-                    websiteLink="https://github.com/freddieb12345/react-book-e-commerce"
-                    githubLink="https://uk-library-react-app.herokuapp.com/"
-                />
-                <Project 
-                    title="Initial Coin Offering" 
-                    image={icoHomePage} 
-                    technologies="HTML, CSS, JAVASCRIPT, REACT, NODEJS, AXIOS"
-                    description="Library is Britain's leading online library platform with thousands of books to choose from, at the lowest prices"
-                    websiteLink="https://github.com/freddieb12345/react-book-e-commerce"
-                    githubLink="https://uk-library-react-app.herokuapp.com/"
-                />
-                <Project 
-                    title="Decentralized Autonomous Organization" 
-                    image={daoHomePage} 
-                    technologies="HTML, CSS, JAVASCRIPT, REACT, NODEJS, AXIOS"
-                    description="Library is Britain's leading online library platform with thousands of books to choose from, at the lowest prices"
-                    websiteLink="https://github.com/freddieb12345/react-book-e-commerce"
-                    githubLink="https://uk-library-react-app.herokuapp.com/"
-                />
-                <Project 
-                    title="Decentralized Exchange" 
-                    image={exchangeHomePage} 
-                    technologies="HTML, CSS, JAVASCRIPT, REACT, NODEJS, AXIOS"
-                    description="Library is Britain's leading online library platform with thousands of books to choose from, at the lowest prices"
-                    websiteLink="https://github.com/freddieb12345/react-book-e-commerce"
-                    githubLink="https://uk-library-react-app.herokuapp.com/"
-                /> */}
             </ul>
+
+            <h1 className={styles.sub__header}><span className={styles.red}>Web 3</span>&nbsp;Experience</h1>
+
+            <Slider />
+
         </section>
     );
 }

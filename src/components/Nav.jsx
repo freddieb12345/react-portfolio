@@ -78,7 +78,7 @@ const Nav = () => {
         </li>
         <li className={styles.list__item}>
           <a
-            href="/#"
+            href="/#projects"
             className={`${styles.list__itemAnchor} ${styles.link__hoverEffect}`}
           >
             Projects
