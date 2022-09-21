@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Project = ({title, image, technologies, description, websiteLink, githubLink}) => {
     return (
-        <li className={styles.project}>
+        <li className={`reveal ${styles.project}`}>
             <div className={styles.wrapper}>
                 <img src={image} alt="" className={styles.img}/>
                 <div className={styles.wrapperBg}></div>

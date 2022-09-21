@@ -13,8 +13,8 @@ const Slider = () => {
 
   return (
     <>
-      <div className="slider__row">
-        <div className="slider__header">
+      <div className="slider__row reveal">
+        <div className="slider__header display-none">
           <div className="progress__bar" ref={progressBarRef}>
             <div className="progress__item active"></div>
             <div className="progress__item"></div>

@@ -5,7 +5,7 @@ export function toggleContrast() {
     if (!constrastToggle) {
         document.documentElement.style.setProperty(
         "--background",
-        "linear-gradient(to right top, #242424, #443449, #763f60, #ae4765, #de5656)"
+        "linear-gradient(to right top, #242424, #242424, #242424, #242424, #242424, #2f2d32, #3b3640, #4a3e4e, #715068, #9e617b, #cc7286, #f88888)"
         );
         document.documentElement.style.setProperty("--font-color", "white");
 

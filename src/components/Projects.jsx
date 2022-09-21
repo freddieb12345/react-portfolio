@@ -8,7 +8,7 @@ import Slider from './Slider';
 const Projects = () => {
     return (
         <section className={styles.projects} id="projects">
-            <h1 className={styles.projects__header}>Here are some of my<span className='red'>&nbsp;Projects</span></h1>
+            <h1 className={`reveal ${styles.projects__header}`}>Here are some of my<span className='red'>&nbsp;Projects</span></h1>
             <ul>
                 <Project 
                     title="Movie" 
@@ -28,7 +28,7 @@ const Projects = () => {
                 />
             </ul>
 
-            <h1 className={styles.sub__header}><span className={styles.red}>Web 3</span>&nbsp;Experience</h1>
+            <h1 className={`reveal ${styles.sub__header}`}><span className={styles.red}>Web 3</span>&nbsp;Experience</h1>
 
             <Slider />
 
