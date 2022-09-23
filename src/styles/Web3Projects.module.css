@@ -1,18 +1,19 @@
 .slider__imgWrapper {
-  flex: 0 0 calc(100% / var(--items-per-screen));
-  max-width: calc(100% / var(--items-per-screen));
-  aspect-ratio: 16 / 9;
-  padding: var(--img-gap);
-  border-radius: 1rem;
-  transition: margin 250ms ease-in-out, transform 250ms ease-in-out;
-  position: relative;
-  overflow: hidden;
+    display: flex;
+    flex: 0 0 calc(100% / var(--items-per-screen));
+    max-width: calc(100% / var(--items-per-screen));
+    aspect-ratio: 16 / 9;
+    padding: var(--img-gap);
+    border-radius: 1rem;
+    transition: margin 250ms ease-in-out, transform 250ms ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .slider__img {
-  border-radius: 1rem;
-  width: 100%;
-  transition: opacity 300ms ease-in;
+    border-radius: 1rem;
+    width: 100%;
+    transition: opacity 300ms ease-in;
 }
 
 .backdrop{

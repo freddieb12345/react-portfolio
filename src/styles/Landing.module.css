@@ -28,6 +28,8 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 200px;
+    /* box-shadow: 0px 0px 100px 100px rgba(218, 218, 218, 0.1); */
+    /* text-shadow: 0 0 100px rgba(218, 218, 218, 0.7); */
 }
 
 .header__para{

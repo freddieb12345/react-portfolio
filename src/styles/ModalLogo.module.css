@@ -13,6 +13,7 @@
     transition: all 1000ms ease;
     align-items: center;
     margin: 0 auto;
+    
 }
 
 .row {
@@ -109,5 +110,5 @@
 .cell.size20 {--size: 20;}
 
 .red {
-    background-color: var(--main-color);
+    background-image: var(--logo-color);
 }

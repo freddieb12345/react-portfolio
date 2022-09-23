@@ -28,7 +28,7 @@ const Projects = () => {
                 />
             </ul>
 
-            <h1 className={`reveal ${styles.sub__header}`}><span className={styles.red}>Web 3</span>&nbsp;Experience</h1>
+            <h1 className={`reveal ${styles.sub__header}`}><span className="red">Web 3</span>&nbsp;Experience</h1>
 
             <Slider />
 

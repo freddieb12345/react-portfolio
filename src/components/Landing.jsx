@@ -24,9 +24,9 @@ const Landing = () => {
             <div className={styles.modal}>
                 <ModalLogo />
                 <Contact />
-                <a className={`${styles.icon} click`} onClick={toggleModal}>
+                <div className={`${styles.icon} click`} onClick={toggleModal}>
                     <FontAwesomeIcon icon="fa-solid fa-x"/>
-                </a>
+                </div>
             </div>
         </section>
     );

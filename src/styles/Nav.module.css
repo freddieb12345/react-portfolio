@@ -30,6 +30,8 @@ nav {
 .list__itemAnchor {
     color: var(--font-color);
     font-weight: bold;
+    background-color: rgba(218, 218, 218, 0.1);
+    box-shadow: 0px 0px 100px 100px rgba(218, 218, 218, 0.1);
 }
 
 .link__hoverEffect {
@@ -43,16 +45,8 @@ nav {
     height: 3px;
     width: 0;
     right: 0;
-    background-color: black;
+    background-color: var(--font-color);
     transition: all 300ms ease;
-}
-
-.link__hoverEffectBlack::after {
-    background-color: black;
-}
-
-.link__hoverEffectWhite::after {
-    background-color: white;
 }
 
 .link__hoverEffect:hover:after {
@@ -61,7 +55,6 @@ nav {
 }
 
 .navModal{
-    
     position: absolute;
     height: 300px;
     width: 150px;
