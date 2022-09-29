@@ -11,7 +11,6 @@ export function toggleModalContent(display) {
   function toggleFormOpactiy(formOpacity) {
     if(!formOpacity) {
       document.documentElement.style.setProperty("--form1-opacity", "0");
-      console.log("hello")
     } else {
       document.documentElement.style.setProperty("--form1-opacity", "1");
     }

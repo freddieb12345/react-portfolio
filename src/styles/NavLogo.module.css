@@ -1,5 +1,5 @@
 .container {
-    --unit:2px;
+    --unit:2.5px;
     --initial-translation: 200px;
     --final-position: 0px;
     justify-content: center;
@@ -73,7 +73,7 @@
 .cell {
     height: 100%;
     width: calc(var(--size, 2px) * var(--unit));
-    background-color: var(--logo-secondary-color);
+    /* background-color: var(--logo-secondary-color); */
     border-radius: 1000px;
 }
 
@@ -118,7 +118,8 @@
 .cell.size20 {--size: 20;}
 
 .red {
-    background-image: var(--logo-color);
+    /* background-image: var(--logo-color); */
+    background-color: var(--main-color);
 }
 
 @media (max-width: 600px) {

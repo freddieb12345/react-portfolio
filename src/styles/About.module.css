@@ -1,20 +1,35 @@
 .about {
-    min-height: 100vh;
+    position: relative;
+    min-height: 90vh;
     width: 100%;
-    background-color: var(--about-color);
-    background-color: #2424241f;
+    background-color: white;
+    /* background-color: #2424241f; */
     display: flex;
     flex-direction: row;
 }
 
+.about::before {
+    margin-top: 15vh;
+    content: "";
+    width: 50%;
+    height: 60vh;
+    position: absolute;
+    background-color: var(--main-color);
+    right: 0;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+
 .wrapper {
     display: flex;
-    max-width: 1400px;
+    /* max-width: 1600px; */
     margin: 0 auto;
 }
 
 .title{
     font-size: 72px;
+    margin-bottom: 32px;
+    color: rgb(73, 73, 73);
 }
 
 .about__content{
@@ -24,12 +39,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 0 5%;
     text-shadow: 0 0 100px rgba(218, 218, 218, 0.7);
 }
 
 .about__para{
     font-size: 28px;
+    /* color: var(--font-color); */
 }
 
 .technologies{
@@ -38,11 +54,20 @@
     justify-content: center;
     align-items: center;
     width: 50%;
+    padding: 0 7vw;
+    /* margin-bottom: 15%; */
+}
+
+.technologiesWrapper{
+    background-color: var(--main);
 }
 
 .sub__title{
+    color: rgb(255, 249, 249);
     font-size: 72px;
-    padding-top: 60px;
+    /* margin-bottom: 20%; */
+    /* padding-top: 60px; */
+    
     text-align: center;
 }
 
@@ -52,12 +77,24 @@
 }
 
 @media (max-width: 1150px) {
+    .about {
+        padding: 0 60px;
+        min-height: 100vh;
+    }
+    .sub__title {
+        color: rgb(73, 73, 73);
+    }
+    .about::before {
+        display: none;
+    }
     .wrapper {
         flex-direction: column;
+        justify-content: space-evenly;
     }
     .about__content,
     .technologies {
         width: 100%;
+        padding: 50px 60px;
     }
     .title,
     .sub__title{
@@ -77,6 +114,10 @@
     .about__para{
         font-size: 20px;
         text-align: center;
+    }
+    .about__content,
+    .technologies {
+        padding: 10px;
     }
 }
 

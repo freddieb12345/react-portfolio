@@ -105,7 +105,13 @@ body::before {
   -webkit-text-fill-color: transparent;
 }
 
+.white {
+  color: rgb(240, 223, 223);
+}
 
+.redText {
+  color: var(--main-color);
+}
 
 .click {
   cursor: pointer;
@@ -437,4 +443,13 @@ html {
 .reveal.active{
   transform: translateY(0);
   opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .slider {
+    --items-per-screen: 1;
+  }
+  .handle {
+    width: calc(var(--handle-size) / 2);
+  }
 }

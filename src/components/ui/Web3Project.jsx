@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "../../styles/Web3Projects.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Web3Project = ({title, image, technologies, description, websiteLink, githubLink}) => {
+const Web3Project = ({title, image, websiteLink, githubLink}) => {
     return (
         <>
             <div className={styles.slider__imgWrapper}>

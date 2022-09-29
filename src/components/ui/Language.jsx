@@ -5,7 +5,7 @@ const Language = ({logo, text}) => {
     return (
         <figure className={styles.language}>
             <img src={logo} alt="" className={styles.language__img}/>
-            <span className={`${styles.language__name} red`}>{text}</span>
+            <span className={`${styles.language__name}`}>{text}</span>
         </figure>
     );
 }

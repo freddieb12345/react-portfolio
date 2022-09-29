@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from '../styles/Projects.module.css'
 import Project from './ui/Project';
-import movieHomePage from "../assets/movie-home-page.PNG"
-import libraryHomePage from "../assets/library-home-page.PNG"
+import { movieHomePage, libraryHomePage } from '../assets';
 import Slider from './Slider';
 
 const Projects = () => {
@@ -28,7 +27,7 @@ const Projects = () => {
                 />
             </ul>
 
-            <h1 className={`reveal ${styles.sub__header}`}><span className="red">Web 3</span>&nbsp;Experience</h1>
+            <h1 className={`reveal ${styles.projects__header}`}><span className="red">Web 3</span>&nbsp;Experience</h1>
 
             <Slider />
 
