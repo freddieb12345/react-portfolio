@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from "../styles/Footer.module.css"
 import NavLogo from './ui/NavLogo';
-import {toggleModalWithDelay} from "../js/toggleModal"
 
-const Footer = () => {
+const Footer = ({toggleModalWithDelay}) => {
     return (
         <footer>
             <div className={styles.container}>

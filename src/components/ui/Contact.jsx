@@ -2,62 +2,31 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from "../../styles/Contact.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import circle from "../../assets/circle.svg"
+import semiCircle from "../../assets/semi-circle.svg"
+import triangle from "../../assets/triangle.svg"
+import squiggly from "../../assets/squiggly.svg"
 
-
-const Contact = () => {
+const Contact = ({toggleModal}) => {
   const form = useRef();
-    const formName = useRef()
-    const formEmail = useRef()
-    const [loading, setLoading] = useState(false);
-    const [success, setSuccess] = useState(false);
-    const [failure, setFailure] = useState(false);
+  const formName = useRef()
+  const formEmail = useRef()
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
 
-    if(failure || success) {
-      document.getElementById("modal_logo").classList.add('display-noneImportant')
+  const scaleFactor = 1 / 20;
+
+  function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape")
+    const x = event.clientX * scaleFactor;
+    const y = event.clientY * scaleFactor;
+    for(let i = 0; i < shapes.length; ++i) {
+        const isOdd = i % 2 !== 0;
+        const booleanInt = isOdd ? -1 : 1;
+        shapes[i].style.transform = `translate(${x * booleanInt}px, ${y * booleanInt}px) rotate(${x / scaleFactor}deg)`
     }
-
-    const formStep1 = (e) => {
-        e.preventDefault();
-        function displayNone() {
-            document.getElementById("form-name").classList.add('display-none')
-            document.getElementById("form-email").classList.remove('display-none')
-            setTimeout(() => {
-                formEmailOpacity()
-            }, 500)
-        }
-
-        function formEmailOpacity() {
-            document.documentElement.style.setProperty("--form2-opacity", "1")
-        }
-
-        document.documentElement.style.setProperty("--form1-opacity", "0")
-        
-        setTimeout(() => {
-            displayNone()
-        }, 500)
-    }
-    
-    
-    const formStep2 = (e) => {
-        e.preventDefault();
-        function displayNone() {
-            document.getElementById("form-email").classList.add('display-none')
-            document.getElementById("form-message").classList.remove('display-none')
-            setTimeout(() => {
-                formMessageOpacity()
-            }, 500)
-        }
-
-        function formMessageOpacity() {
-            document.documentElement.style.setProperty("--form3-opacity", "1")
-        }
-
-        document.documentElement.style.setProperty("--form2-opacity", "0")
-        
-        setTimeout(() => {
-            displayNone()
-        }, 500)
-    }
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -75,35 +44,87 @@ const Contact = () => {
 
   return (
     <>
-    {!loading && !success && !failure && (<form ref={form} className={`${styles.contactForm} display-none`} id="contact-form">
-        <div className={`${styles.name}`}  id="form-name" ref={formName}>
-          <label className={styles.nameLabel}>What's Your Name</label>
-          <input className={styles.nameInput} type="text" name="user_name" autoComplete='off'/>
-          <button className={`${styles.formButton} click`} onClick={formStep1}>Next</button>
-        </div>
-        <div className={`${styles.email} display-none`} ref={formEmail} id="form-email">
-          <label className={styles.emailLabel}>Email</label>
-          <input type="email" name="user_email" className={styles.emailInput}/>
-          <button className={`${styles.formButton} click`} onClick={formStep2}>Next</button>
-        </div>
-        <div className={`${styles.message} display-none`} id="form-message">
-          <label className={styles.messageLabel}>Message</label>
-          <textarea className={styles.messageInput} name="message" />
-          <button className={`${styles.formButton} click`} onClick={sendEmail}>Send</button>
-        </div>
-      </form>)}
+      <div className={styles.contact} onMouseMove={moveBackground}>
+        <div className={styles.contactLeft}>
 
-        {loading && (<div className={styles.spinnerWrapper}>
-        <FontAwesomeIcon icon="fa-solid fa-spinner" />
-      </div>)}
+          <div className={styles.wrapper}>
+            <div className={styles.envelopeWrapper}>
+              <div className={`${styles.one} ${styles.lid}`}></div>
+              <div className={`${styles.two} ${styles.lid}`}></div>
+              <div className={styles.envelope}>
+              </div>
+              <div className={styles.letter}>
+                <p>Contact Me</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div className={styles.contactRight}>
+          <div className={`${styles.icon} click`} onClick={toggleModal}>
+              <FontAwesomeIcon icon="fa-solid fa-x"/>
+          </div>
+          <img src={semiCircle} alt="" className={`shape ${styles.shape} ${styles.shape0}`}/>
+          <img src={circle} alt="" className={`shape ${styles.shape} ${styles.shape1}`}/>
+          <img src={squiggly} alt="" className={`shape ${styles.shape} ${styles.shape2}`}/>
+          <img src={circle} alt="" className={`shape ${styles.shape} ${styles.shape3}`}/>
+          <img src={triangle} alt="" className={`shape ${styles.shape} ${styles.shape4}`}/>
+          <img src={circle} alt="" className={`shape ${styles.shape} ${styles.shape5}`}/>
+          <img src={squiggly} alt="" className={`shape ${styles.shape} ${styles.shape6}`}/>
+          <img src={circle} alt="" className={`shape ${styles.shape} ${styles.shape7}`}/>
+          <img src={semiCircle} alt="" className={`shape ${styles.shape} ${styles.shape8}`}/>
+          <img src={squiggly} alt="" className={`shape ${styles.shape} ${styles.shape9}`}/>
+          <img src={circle} alt="" className={`shape ${styles.shape} ${styles.shape10}`}/>
+          <img src={semiCircle} alt="" className={`shape ${styles.shape} ${styles.shape11}`}/>
+          {!loading && !success && !failure && 
+            (
+              <form ref={form} className={`${styles.contactForm}`} id="contact-form">
+                <h2 className={styles.formTitle}>
+                  Get in touch
+                </h2>
+                <div className={`${styles.name}`}  id="form-name" ref={formName}>
+                  <input className={styles.nameInput} type="text" name="user_name" autoComplete='off' placeholder='Name'/>
+                </div>
+                <div className={`${styles.email}`} ref={formEmail} id="form-email">
+                  <input type="email" name="user_email" className={styles.emailInput} autoComplete='off' placeholder='Email'/>
+                </div>
+                <div className={`${styles.message}`} id="form-message">
+                  <textarea className={styles.messageInput} name="message" autoComplete='off' placeholder='Message'/>
+                </div>
+                <button className={`${styles.formButton} click`} onClick={sendEmail}>
+                  <FontAwesomeIcon icon="fa-solid fa-paper-plane" />
+                </button>
+              </form>
+            )
+          }
 
-      {success && (<h1 className={styles.success}>
-        Your message has been sent!
-      </h1>)}
+          {loading && 
+            (
+              <div className={styles.spinnerWrapper}>
+                <FontAwesomeIcon icon="fa-solid fa-spinner" />
+              </div>
+            )
+          }
 
-      {failure && (<h1>
-        Your message failed to send!
-      </h1>)}
+          {
+            success && 
+            (
+              <h1 className={styles.success}>
+                Your message has been sent!
+              </h1>
+            )
+          }
+
+          {
+            failure && 
+            (
+              <h1>
+                Your message failed to send!
+              </h1>
+            )
+          }
+        </div>
+      </div>
     </>
   );
 };

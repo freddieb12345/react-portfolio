@@ -3,7 +3,7 @@ import styles from '../../styles/ModalLogo.module.css'
 
 const ModalLogo = () => {
     return (
-        <div className={`${styles.container}` } id="modal_logo">
+        <div className={`${styles.container} modal__logoAnimation` } id="modal_logo">
             <div className={`${styles.row} modal_row`}>
                 <div className={`${styles.cell} ${styles.size5}`}></div>
                 <div className={`${styles.cell} ${styles.size2}`}></div> 

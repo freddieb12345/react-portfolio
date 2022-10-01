@@ -39,19 +39,22 @@
 
 @media (max-width: 1150px) {
     :root {
-        --languages-per-row: 4
+        --languages-per-row: 6
     }
     .language {
-        padding: 5%;
+        padding: 3%;
     }
     .language__name{
         color: black;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+    :root {
+        --languages-per-row: 4
+    }
     .language {
-        padding: 30px;
+        padding: 5%;
     }
 }
 

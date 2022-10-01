@@ -10,5 +10,4 @@ export function reveal() {
             reveals[i].classList.remove("active")
         }
     }
-    
 }

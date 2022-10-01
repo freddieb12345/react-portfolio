@@ -15,6 +15,7 @@ export function toggleContrast() {
         document.documentElement.style.setProperty("--mail-text-color", "#DE5656");
         document.documentElement.style.setProperty("--about-color", "#242424");
         document.documentElement.style.setProperty("--logo-secondary-color", "#feeeee");
+        document.documentElement.style.setProperty("--form-input-color", "#424242");
     } else {
         document.documentElement.style.setProperty(
         "--background",
@@ -26,5 +27,6 @@ export function toggleContrast() {
         document.documentElement.style.setProperty("--mail-color", "#DE5656");
         document.documentElement.style.setProperty("--mail-text-color", "#feeeee");
         document.documentElement.style.setProperty("--logo-secondary-color", "#2424246e");
+        document.documentElement.style.setProperty("--form-input-color", "#dad1d1");
     }
 }

@@ -2,15 +2,13 @@ import React from "react";
 import styles from "../styles/Nav.module.css";
 import { toggleContrast } from "../js/toggleContrast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import Logo from "./ui/Logo";
 import NavLogo from "./ui/NavLogo";
-import { toggleModal } from "../js/toggleModal";
 
-const Nav = () => {
-  let tavModalToggle;
+const Nav = ({ toggleModal }) => {
+  let navModalToggle;
   function toggleNavModal() {
-    tavModalToggle = !tavModalToggle
-    if(tavModalToggle) {
+    navModalToggle = !navModalToggle
+    if(navModalToggle) {
       document.getElementById("bars").classList.add("display-none")
       document.getElementById("nav-modal").classList.remove("display-none")
     } else {

@@ -8,6 +8,7 @@
     max-width: 1400px;
     margin: 0 auto;
     padding: 16px;
+    transition: all 500ms ease-in-out;
 }
 
 .title{
@@ -19,7 +20,14 @@ header {
     height: 100%;
     color: var(--font-color);
     transition: all 500ms ease;
-    opacity: var(--header-opacity);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
 }
 
 .header__content{
@@ -85,13 +93,14 @@ header {
 }
 
 .modal {
-    opacity: var(--modal-opacity);
+    /* opacity: var(--modal-opacity); */
     display: flex;
     flex-direction: column;
     position: absolute;
     height: 80vh;
-    width: 80vw;
-    background-color: #2424241f;
+    width: 100%;
+    max-width: 1200px;
+    /* background-color: #2424241f; */
     border-radius: 50px;
     top: 0%;
     left: 50%;
@@ -114,13 +123,6 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-}
-
-.icon{
-    position: absolute;
-    font-size: 32px;
-    left: 93%;
-    top: 4%;
 }
 
 @media (max-width: 500px) {
