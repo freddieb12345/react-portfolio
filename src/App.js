@@ -63,7 +63,6 @@ function App() {
       <About />
       <Projects />
       <Footer toggleModalWithDelay={toggleModalWithDelay}/>
-      {/* <Logo unit="2px"/> */}
     </div>
   );
 }

@@ -49,7 +49,6 @@
 .cell {
     height: 100%;
     width: calc(var(--size, 2px) * var(--unit));
-    /* background-color: var(--logo-secondary-color); */
     border-radius: 1000px;
 }
 

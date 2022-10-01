@@ -19,7 +19,6 @@ const Nav = ({ toggleModal }) => {
 
   return (
     <nav>
-      {/* <Logo selectedUnit="2px"/> */}
       <NavLogo />
       <div className={`click red ${styles.btnMenu}`} onClick={toggleNavModal}>
         <FontAwesomeIcon icon="fa-solid fa-bars" id="bars"/>

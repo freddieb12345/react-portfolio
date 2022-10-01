@@ -46,7 +46,6 @@ const Contact = ({toggleModal}) => {
     <>
       <div className={styles.contact} onMouseMove={moveBackground}>
         <div className={styles.contactLeft}>
-
           <div className={styles.wrapper}>
             <div className={styles.envelopeWrapper}>
               <div className={`${styles.one} ${styles.lid}`}></div>

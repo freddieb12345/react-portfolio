@@ -3,34 +3,30 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  /* text-shadow: 0 0 100px rgba(218, 218, 218, 0.7); */
-  /* font-family: "Courier New", Courier, monospace; */
 }
 
 :root {
   --main-color: #DE5656;
   --logo-color: linear-gradient(340deg, #FFCBCB 5%, var(--main-color));
-  --secondary-color: #242424;
-  --background: linear-gradient(to right top, #242424, #242424, #242424, #242424, #242424, #2f2d32, #3b3640, #4a3e4e, #715068, #9e617b, #cc7286, #f88888);
+  --secondary-color: #feeeee;
   --spheres: linear-gradient(to right top, #feeeee, #fcc9c8, #f5a4a2, #eb7e7c, #de5656);
-  --font-color: white;
+  --font-color: black;
   --logo-invert: 0%;
   --handle-size: 3rem;
   --img-gap: .25rem;
-  --mail-text-color:#DE5656;
+  --mail-text-color:#feeeee;
   --mail-text-colo1r:#2424246e;
-  --mail-color: #feeeee;
+  --mail-color: #DE5656;
   --about-color: #242424;
   --body-overflow: auto;
   --modal-opacity: 0;
   --inverse-modal-opacity: 1;
-  --logo-secondary-color: #feeeee;
-  --form-input-color: #424242
+  --logo-secondary-color: #2424246e;
+  --form-input-color: #dad1d1
 }
 
 body {
   background: fixed;
-  /* background-image: var(--background); */
   background-color: var(--secondary-color);
   height: 100vh;
   transition: all 500ms ease;
@@ -101,9 +97,6 @@ body::before {
 
 .red {
   color: var(--main-color);
-  /* background: -webkit-linear-gradient(100deg, #FFCBCB 5%, var(--main-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 
 .white {
@@ -216,10 +209,8 @@ html {
 .row:nth-child(13) { --delay: 13 ;}
 
 .row {
-  /* height: var(--unit); */
   display: flex;
   flex-direction: row;
-  /* gap: var(--unit); */
   transition: all 1000ms ease;
 }
 
@@ -260,7 +251,6 @@ html {
 
 .cell {
   height: 100%;
-  /* width: calc(var(--size, 2px) * var(--unit)); */
   background-color: var(--logo-secondary-color);
   border-radius: 1000px;
 }

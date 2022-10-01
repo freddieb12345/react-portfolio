@@ -9,7 +9,6 @@ const Landing = ({modalToggle, logoToggle, formToggle, headerToggle, toggleModal
     const modalWithLogo = modalToggle && logoToggle && !headerToggle && !formToggle
     const modalWithForm = modalToggle && !logoToggle && !headerToggle && formToggle
 
-
     return (
         <section className={styles.landing}>
             {headerOn &&
@@ -20,7 +19,7 @@ const Landing = ({modalToggle, logoToggle, formToggle, headerToggle, toggleModal
                         <p className={styles.header__para}>Frontend Web-Developer</p>
                     </div>
                     <a href="/#">
-                        <button className={`${styles.mail__icon} click`}>
+                        <button className={`${styles.mail__icon} click`} onClick={toggleModal}>
                             <FontAwesomeIcon icon="fa-solid fa-envelope"/>
                         </button>
                     </a>
