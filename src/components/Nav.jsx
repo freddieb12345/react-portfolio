@@ -3,7 +3,6 @@ import styles from "../styles/Nav.module.css";
 import { toggleContrast } from "../js/toggleContrast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavLogo from "./ui/NavLogo";
-import { Link } from "react-router";
 
 const Nav = ({ toggleModal }) => {
   const [navMenuToggle, setNavMenuToggle] = useState(false);
