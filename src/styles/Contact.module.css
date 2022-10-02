@@ -20,8 +20,7 @@
     border-bottom-left-radius: inherit;
     transform: translateX(-100%);
     opacity: 0;
-    animation: SlideIn 1s forwards;
-    animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+    animation: SlideIn 0.5s forwards linear;
     overflow: hidden;
 }
 
@@ -36,8 +35,7 @@
     border-bottom-right-radius: inherit;
     transform: translateX(100%);
     opacity: 0;
-    animation: SlideIn 1s forwards;
-    animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+    animation: SlideIn 0.5s forwards linear;
     overflow: hidden;
 }
 
@@ -198,22 +196,23 @@
     transition-delay: 0.5s;
 }
 
-.envelopeWrapper:hover .lid.one {
+
+.contact:hover .lid.one {
     transform: rotateX(90deg);
     transition-delay: 0s;
 }
 
-.envelopeWrapper:hover .lid.two {
+.contact:hover .lid.two {
     transform: rotateX(180deg);
     transition-delay: 0.25s;
 }
 
-.envelopeWrapper:hover .letter {
+.contact:hover .letter {
     transform: translateY(-50px);
     transition-delay: 0.5s;
 }
 
-.envelopeWrapper:hover .letter P{
+.contact:hover .letter P{
     animation: 
         typing 2.5s steps(15, end),
         blink-caret .75s step-end infinite;
@@ -294,28 +293,6 @@
     left: 80%;
 }
 
-@media (max-width: 800px) {
-    .contact {
-        flex-direction: column;
-    }
-
-    .contactLeft {
-        display: none;
-    }
-
-    .contactRight {
-        border-radius: 50px;
-        border: 2px solid var(--main-color);
-    }
-    .contactLeft, .contactRight {
-        width: 100%;
-    }
-
-    input {
-        padding: 32px 0;
-    }
-}
-
 .spinnerWrapper{
     height: 100%;
     width: 100%;
@@ -340,5 +317,34 @@
 @keyframes spinner {
     100% {
         rotate: 360deg;
+    }
+}
+
+@media (max-width: 800px) {
+    .contact {
+        flex-direction: column;
+    }
+
+    .contactLeft {
+        display: none;
+    }
+
+    .contactRight {
+        border-radius: 50px;
+        border: 2px solid var(--main-color);
+    }
+    .contactLeft, .contactRight {
+        width: 100%;
+    }
+
+    input {
+        padding: 32px 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .formTitle{
+        font-size: 26px;
     }
 }

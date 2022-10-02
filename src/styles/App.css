@@ -95,6 +95,21 @@ body::before {
   100% {left: 70% ; bottom: 80%;}
 }
 
+.mail__icon{
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--mail-color);
+  color: var(--mail-text-color);
+  position: fixed;
+  bottom: 32px;
+  right: 40px;
+  z-index: 1000;
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.5);
+}
+
 .red {
   color: var(--main-color);
 }

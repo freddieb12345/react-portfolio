@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import { reveal } from "./js/reveal"
 import React, { useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   window.addEventListener("scroll", reveal);
@@ -52,6 +53,11 @@ function App() {
 
   return (
     <div className="App">
+      <a href="/#">
+          <button className={`mail__icon click`} onClick={toggleModal}>
+              <FontAwesomeIcon icon="fa-solid fa-envelope"/>
+          </button>
+      </a>
       <Nav toggleModal = {toggleModal} />
       <Landing 
         modalToggle = {modalToggle} 
