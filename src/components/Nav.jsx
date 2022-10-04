@@ -4,20 +4,8 @@ import { toggleContrast } from "../js/toggleContrast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavLogo from "./ui/NavLogo";
 
-const Nav = ({ toggleModal }) => {
+const Nav = ({ toggleModal, toggleModalOff }) => {
   const [navMenuToggle, setNavMenuToggle] = useState(false);
-
-  let navModalToggle;
-  function toggleNavModal() {
-    navModalToggle = !navModalToggle;
-    if (navModalToggle) {
-      document.getElementById("bars").classList.add("display-none");
-      document.getElementById("nav-modal").classList.remove("display-none");
-    } else {
-      document.getElementById("bars").classList.remove("display-none");
-      document.getElementById("nav-modal").classList.add("display-none");
-    }
-  }
 
   useEffect(() => {
     console.log(navMenuToggle);
@@ -28,17 +16,32 @@ const Nav = ({ toggleModal }) => {
       <NavLogo />
       {navMenuToggle ? (
         <div className={`${styles.navModal}`} id="nav-modal">
-          <div
+          {/* <div
             className={`click ${styles.cross}`}
             id="cross"
             onClick={() => setNavMenuToggle((prev) => !prev)}
           >
             <FontAwesomeIcon icon="fa-solid fa-x" />
-          </div>
+          </div> */}
 
           <ul className={styles.modalList} id="modal-list">
             <li
-              className={`${styles.modalList__item} ${styles.modalList__itemAbout}`}
+                className={`${styles.modalList__item}`}
+              >
+                <a
+                  href="/#"
+                  className={`${styles.modalList__itemAnchor}`}
+                >
+                  <button
+                    className={`click ${styles.menuButtonClose}`}
+                    onClick={() => setNavMenuToggle((prev) => !prev)}
+                  >
+                    Close
+                  </button>
+                </a>
+            </li>
+            <li
+              className={`${styles.modalList__item}`}
             >
               <a
                 href="/#about"
@@ -106,6 +109,7 @@ const Nav = ({ toggleModal }) => {
         <li className={`${styles.list__item} ${styles.list__itemAbout}`}>
           <a
             href="/#about"
+            onClick={toggleModalOff}
             className={`${styles.list__itemAnchor} ${styles.link__hoverEffect} ${styles.link__hoverEffect} `}
           >
             About
@@ -114,6 +118,7 @@ const Nav = ({ toggleModal }) => {
         <li className={styles.list__item}>
           <a
             href="/#projects"
+            onClick={toggleModalOff}
             className={`${styles.list__itemAnchor} ${styles.link__hoverEffect}`}
           >
             Projects

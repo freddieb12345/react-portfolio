@@ -5,7 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import { reveal } from "./js/reveal"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
@@ -22,34 +22,51 @@ function App() {
     }, delay)
   }
 
+  function formAndLogoToggle() { 
+    setFormToggle(true)
+    setLogoToggle(false)
+  }
+
+  function toggleModalOff() {
+    setModalToggle(false)
+    setLogoToggle(false)
+    setFormToggle(false)
+    setLogoToggle(false)
+    
+    setTimeout(() => {
+      setHeaderToggle(true)
+    }, 500)
+  }
+
+  function toggleModalOn() {
+    setModalToggle(true)
+    setLogoToggle(true)
+    setHeaderToggle(false)
+    
+    setTimeout(() => {
+      formAndLogoToggle()
+    }, 1500)
+  }
+
   const toggleModal = () => {
     setToggle((prev) => !prev)
-    
-    function formAndLogoToggle() { 
-      setFormToggle(true)
-      setLogoToggle(false)
-    }
 
     if(!toggle) {
-      setModalToggle(true)
-      setLogoToggle(true)
-      setHeaderToggle(false)
-      
-      setTimeout(() => {
-        formAndLogoToggle()
-      }, 1500)
+      toggleModalOn()
 
     } else if(toggle) {
-      setModalToggle(false)
-      setLogoToggle(false)
-      setFormToggle(false)
-      setLogoToggle(false)
-      
-      setTimeout(() => {
-        setHeaderToggle(true)
-      }, 500)
+      toggleModalOff()
     }
   }
+
+  useEffect(() => {
+    console.table({
+      "modalToggle": modalToggle,
+      "logoToggle":logoToggle,
+      "formToggle":formToggle,
+      "headerToggle": headerToggle
+    });
+  }, [modalToggle, logoToggle, formToggle, headerToggle]);
 
   return (
     <div className="App">
@@ -58,7 +75,7 @@ function App() {
               <FontAwesomeIcon icon="fa-solid fa-envelope"/>
           </button>
       </a>
-      <Nav toggleModal = {toggleModal} />
+      <Nav toggleModal = {toggleModal} toggleModalOff={toggleModalOff}/>
       <Landing 
         modalToggle = {modalToggle} 
         logoToggle={logoToggle} 
