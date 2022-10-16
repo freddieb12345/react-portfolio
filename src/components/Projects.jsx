@@ -14,16 +14,16 @@ const Projects = () => {
                     image={movieHomePage} 
                     technologies="HTML, CSS, JAVASCRIPT, REACT, NODEJS, AXIOS"
                     description="Movie is Britain's leading online movie database with information on all your favorite films"
-                    websiteLink="https://github.com/freddieb12345/movie-api"
-                    githubLink="https://uk-movie-react-app.herokuapp.com/"
+                    websiteLink="https://uk-movie-react-app.herokuapp.com/"
+                    githubLink="https://github.com/freddieb12345/movie-api"
                 />
                 <Project 
                     title="Library" 
                     image={libraryHomePage} 
                     technologies="HTML, CSS, JAVASCRIPT, REACT, NODEJS, AXIOS"
                     description="Library is Britain's leading online library platform with thousands of books to choose from, at the lowest prices"
-                    websiteLink="https://github.com/freddieb12345/react-book-e-commerce"
-                    githubLink="https://uk-library-react-app.herokuapp.com/"
+                    websiteLink="https://uk-library-react-app.herokuapp.com/"
+                    githubLink="https://github.com/freddieb12345/react-book-e-commerce"
                 />
             </ul>
 

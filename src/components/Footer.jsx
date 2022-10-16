@@ -9,12 +9,13 @@ const Footer = ({toggleModalWithDelay}) => {
                 <div className={`${styles.row} ${styles.footer__row}`}>
                     <NavLogo />
                     <div className={styles.footer__socialList}>
-                        <a href="/https://github.com/freddieb12345" className={`
+                        <a href="https://github.com/freddieb12345" className={`
                             ${styles.footer__socialLink} 
                             ${styles.link__hoverEffect} 
                             ${styles.link__hoverEffectWhite}
                         `}
-                        target="_blank">
+                        
+                        target="_blank" rel='noreferrer'>
                             Github
                         </a>
                         <a href="/www.linkedin.com/in/freddie-brewin" className={`
@@ -22,7 +23,7 @@ const Footer = ({toggleModalWithDelay}) => {
                             ${styles.link__hoverEffect} 
                             ${styles.link__hoverEffectWhite}
                         `}
-                        target="_blank">
+                        target="_blank" rel='noreferrer'>
                             LinkedIn
                         </a>
                         <a href="/#" className={`
@@ -34,14 +35,14 @@ const Footer = ({toggleModalWithDelay}) => {
                         >
                             Contact
                         </a>
-                        <a href="/#" className={`
+                        {/* <a href="/#" className={`
                             ${styles.footer__socialLink} 
                             ${styles.link__hoverEffect} 
                             ${styles.link__hoverEffectWhite}
                         `}
                         target="_blank">
                             Resume
-                        </a>
+                        </a> */}
                     </div>
                     <div className={styles.footer__copyright}>
                         Copyright &copy; Freddie Brewin 2022
