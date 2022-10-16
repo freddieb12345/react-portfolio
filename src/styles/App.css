@@ -21,7 +21,8 @@
   --modal-opacity: 0;
   --inverse-modal-opacity: 1;
   --logo-secondary-color: #2424246e;
-  --form-input-color: #dad1d1
+  --form-input-color: #dad1d1;
+  --about-secondary-color: white;
 }
 
 body {

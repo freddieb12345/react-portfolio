@@ -18,7 +18,7 @@ import Language from './ui/Language';
 
 const About = () => {
     return (
-        <section id="about" className={`${styles.about}`}>
+        <section id="about" className={`${styles.about} reveal`}>
             <div className={`${styles.wrapper}`}>
                 <div className={styles.about__content}>
                     <h1 className={`${styles.title}`}>About me</h1>
